@@ -3,7 +3,7 @@
 
   var app = angular.module('MysiteApp', ['ngRoute', 'MyDirectives', 'ngAnimate', 'ngMaterial']);
 
-  // service created to pass variable between landing controller and comic controller. 
+  // service created to pass boolean and json data between controllers. 
   app.service('sharedProperties', function ($http) {
     var property = true;
 
@@ -24,12 +24,13 @@
   app.controller('LandCtrl', function ($scope, $timeout, sharedProperties) {
     $scope.showLanding = sharedProperties.getProperty();
     $scope.isFlipped = false;
+    $scope.startBlocks = [0,1,2,3,4,5,6];
 
     $scope.toggleLanding = function() {
       $timeout(function() {
         $scope.showLanding = false;
         sharedProperties.setProperty(false);
-      }, 1700);
+      }, 1500);
     };
   });
 
@@ -40,18 +41,24 @@
     $scope.isSidenavOpen = false;
     $scope.currentcomic = 0;
     $scope.comics = [];
-    console.log(sharedProperties.getComics());
     $scope.isDroped = false;
     $scope.aerurex = [{"letter": "A", "valid": false, "id": 0}, {"letter": "E", "valid": false, "id": 1}, {"letter": "R", "valid": false, "id": 2}, {"letter": "U", "valid": false, "id": 3}, {"letter": "R", "valid": false, "id": 4}, {"letter": "E", "valid": false, "id": 5}, {"letter": "X", "valid": false, "id": 6}];
 
+    // watch for changes in shared boolean - this case indicating if landing page is still active
     $scope.$watch(function() { return sharedProperties.getProperty(); }, function(newVal) { 
       if(initializing) {
         initializing = false;
       } else {
-        comicStart();        
+        $scope.dropComics();
+        (function(){
+          $timeout(function() { 
+            comicStart();  
+          }, 0);
+        })();      
       }
     }, true);
 
+    // change letter validity to true to signal "drop" animation of letter. Also retreive comics from service and allow comics to be shown
     var comicStart = function () {
       for(var i=0; i<$scope.aerurex.length; i++) {
         (function(i){ 
@@ -59,13 +66,13 @@
             $scope.aerurex[i].valid = true;
             if(i === 6) {
               $scope.getComics();
-              $scope.dropComics();
             };
           }, i * 200);
         })(i);
       }
     }
 
+    // watch for changes in sidenav bar and change var boolChangeClass to show this
     $scope.$watch('isSidenavOpen', function(isSidenavOpen) {
       $scope.boolChangeClass = !$scope.boolChangeClass;
     });

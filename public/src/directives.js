@@ -22,4 +22,18 @@
 	    };
 	});
 
+	app.directive('titleComics', function() {
+	    return {
+	      restrict: 'E',
+	      templateUrl: 'views/title-comics.html'
+	    };
+	});
+
+	app.directive('gridComics', function() {
+	    return {
+	      restrict: 'E',
+	      templateUrl: 'views/grid-comics.html'
+	    };
+	});
+
 })();

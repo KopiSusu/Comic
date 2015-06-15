@@ -1,13 +1,10 @@
 <section ng-controller="ComCtrl">
-  <div class="title">
-    <div class="letter" ng-repeat='letter in aerurex track by $index' ng-class="{'drop':checkDropValue(letter.id)}">
-      <span>{{letter.letter}}</span>
-    </div>
-  </div>
 
-  <div ng-repeat='comic in comics' class="article">
-    <img ng-src="{{comic.image}}"/>
-  </div>
+	<title-comics></title-comics>
+
+	<grid-comics></grid-comics>
+
+	<!-- <about-page></about-page> -->
 
 </section>
 
