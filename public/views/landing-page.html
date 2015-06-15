@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="flip"> 
+    <img src='http://static.hdw.eweb4.com/media/wallpapers_dl/1/30/290664-.png'/>
+    <div class="card" ng-class="{'tflipped':isFlipped}"> 
+        <div class="face front" ng-click="isFlipped=!isFlipped; toggleLanding()"> 
+        </div> 
+        <div class="face back"> 
+        </div> 
+    </div>
+    <div class="card" ng-class="{'slide':isFlipped}"> 
+        <div class="face front" ng-click="isFlipped=!isFlipped; toggleLanding()"> 
+        </div> 
+        <div class="face mback"> 
+        </div> 
+    </div> 
+    <div class="card" ng-class="{'bflipped':isFlipped}"> 
+        <div class="face front" ng-click="isFlipped=!isFlipped; toggleLanding()"> 
+        </div> 
+        <div class="face back"> 
+        </div> 
+    </div>  
+  </div> 
+</div>
+
+

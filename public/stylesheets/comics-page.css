@@ -1,0 +1,39 @@
+
+
+.title {
+  text-align: center;
+  font-size: 5em;
+  margin-top: -20%;
+  opacity: 1;
+  color: #333;
+    -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d; 
+}
+
+.title .letter {
+  display: inline-block;
+  padding-top: 40%;
+  -webkit-transform: rotatex(104deg);
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d; 
+}
+
+.title .letter.drop {
+  -webkit-transform: rotatex(0deg);
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d; 
+}
+
+/*.title.up {
+  margin-top: -35%;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d; 
+}*/
+
+.article {
+  width: 200px;
+  height: 250px;
+}
+.article img {
+
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Opportunity",
+    "synopsis": "little synopsis about the comic",
+    "image": "../comics/1.jpg",
+    "id": 0
+  },
+  {
+    "title": "Childs Play",
+    "synopsis": "Little explination about the comic maybe?",
+    "image": "../comics/2.jpg",
+    "id": 1
+  },
+  {
+    "title": "Forensics",
+    "synopsis": "Little explination about the comic maybe?",
+    "image": "../comics/3.jpg",
+    "id": 2
+  },
+  {
+    "title": "Pets",
+    "synopsis": "Little explination about the comic maybe?",
+    "image": "../comics/4.jpg",
+    "id": 3
+  },
+  {
+    "title": "Obesity",
+    "synopsis": "Little explination about the comic maybe?",
+    "image": "../comics/5.jpg",
+    "id": 4
+  },
+  {
+    "title": "Taste",
+    "synopsis": "Little explination about the comic maybe?",
+    "image": "../comics/6.jpg",
+    "id": 5
+  },
+  {
+    "title": "Social Life",
+    "synopsis": "Little explination about the comic maybe?",
+    "image": "../comics/7.jpg",
+    "id": 6
+  },
+  {
+    "title": "Science Fair",
+    "synopsis": "Little explination about the comic maybe?",
+    "image": "../comics/8.jpg",
+    "id": 7
+  },
+  {
+    "title": "Human Nature",
+    "synopsis": "Little explination about the comic maybe?",
+    "image": "../comics/9.jpg",
+    "id": 8
+  },
+  {
+    "title": "Babysitting",
+    "synopsis": "Little explination about the comic maybe?",
+    "image": "../comics/10.jpg",
+    "id": 9
+  }
+]
