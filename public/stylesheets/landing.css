@@ -25,16 +25,17 @@ landing-page {
 }
 .flip .card.tflipped {
   -webkit-transform: rotatex(180deg);
+   -webkit-transition: 1s;
+  -webkit-transition-delay: 0.5s;
 }
 .flip .card.bflipped {
   -webkit-transform: rotatex(-180deg);
-  -webkit-transition-delay: 0.25s;
 }
 .flip .card.slide {
   -webkit-transform: translate(100%, 0);
     -webkit-transform-style: preserve-3d;
   -webkit-transition: 1s;
-  -webkit-transition-delay: 0.5s;
+  -webkit-transition-delay: 0.25s;
 }
 .flip .card {
   width: 100%;
@@ -50,8 +51,6 @@ landing-page {
   z-index: 2;
     font-family: Georgia;
     font-size: 3em;
-    text-align: center;
-    line-height: 200px;
 }
 .flip .card .front {
   position: absolute;
@@ -80,15 +79,16 @@ landing-page {
   height: 100%;
 }
 
-.flip .card .mback .letter{ 
+.flip .card .back .letter{ 
   display: inline-block;
-  margin: 2.9% 0.1% 0% 0%;
+  margin: 0.95% 0.1% 0% 0%;
   padding: 8px;
-  width: 100px;
-  height: 145px;
+  width: 50.7px;
+  height: 71px;
   background: orange;
   z-index: 100;
-  -webkit-transform: rotatex(180deg);
-  -webkit-transition: 1s;
-  -webkit-transform-style: preserve-3d; 
 }
+
+.flip .card .back .letter:first-of-type {
+  margin-left: 1%;
+} 

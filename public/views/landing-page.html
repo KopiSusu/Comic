@@ -5,15 +5,15 @@
         <div class="face front" ng-click="isFlipped=!isFlipped; toggleLanding()"> 
         </div> 
         <div class="face back"> 
+            <md-card class="letter" ng-repeat='letter in startBlocks track by $index'>
+                <span></span>
+            </md-card>
         </div> 
     </div>
     <div class="card" ng-class="{'slide':isFlipped}"> 
         <div class="face front" ng-click="isFlipped=!isFlipped; toggleLanding()"> 
         </div> 
         <div class="face mback"> 
-            <md-card class="letter" ng-repeat='letter in startBlocks track by $index'>
-                <span></span>
-            </md-card>
         </div> 
     </div> 
     <div class="card" ng-class="{'bflipped':isFlipped}"> 

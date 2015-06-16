@@ -24,7 +24,7 @@
   app.controller('LandCtrl', function ($scope, $timeout, sharedProperties) {
     $scope.showLanding = sharedProperties.getProperty();
     $scope.isFlipped = false;
-    $scope.startBlocks = [0,1,2,3,4,5,6];
+    $scope.startBlocks = ["A","E","R","U","R","E","X"];
 
     $scope.toggleLanding = function() {
       $timeout(function() {
@@ -49,7 +49,6 @@
       if(initializing) {
         initializing = false;
       } else {
-        $scope.dropComics();
         (function(){
           $timeout(function() { 
             comicStart();  
@@ -66,6 +65,7 @@
             $scope.aerurex[i].valid = true;
             if(i === 6) {
               $scope.getComics();
+              $scope.dropComics();
             };
           }, i * 200);
         })(i);
